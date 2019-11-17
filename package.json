@@ -1,0 +1,31 @@
+{
+  "name": "top25NFLPlayerMobile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.19.2"
+  },
+  "dependencies": {
+    "@apollo/react-hooks": "^3.1.2",
+    "apollo-client-preset": "^1.0.8",
+    "apollo-server": "^2.9.4",
+    "dotenv": "^8.1.0",
+    "graphql": "^14.5.8",
+    "graphql-tag": "^2.10.1",
+    "graphql-tools": "^4.0.5",
+    "mongoose": "^5.7.1",
+    "react-apollo": "^3.1.2",
+    "react-navigation": "^4.0.10",
+    "react-navigation-drawer": "^2.2.2"
+  }
+}
