@@ -6,7 +6,7 @@ import { ApolloProvider} from 'react-apollo';
 
 import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-client-preset';
 
-import Navigator from './Navigator';
+import Navigator from './source/Navigator';
 
 const client = new ApolloClient({
   

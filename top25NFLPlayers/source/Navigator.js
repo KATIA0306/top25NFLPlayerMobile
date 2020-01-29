@@ -4,7 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack'
 
 import Home from './Home';
 import PlayersList from './PlayersList';
-import CreatePlayer from './source/useCreatePlayer'
+import CreatePlayer from './useCreatePlayer'
 
 const NavStack = createStackNavigator({
     Home: Home,

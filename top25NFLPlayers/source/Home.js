@@ -9,7 +9,6 @@ class Home extends PureComponent {
         drawerLabel: "Home"
     }
     render() {
-        console.log("this.props", this.props)
         return (
             <View style={styles.container}>
                 <Image source={footBallImage} style={styles.image} />

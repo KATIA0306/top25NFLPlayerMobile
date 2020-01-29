@@ -35,16 +35,14 @@ const ADD_PLAYER = gql`
   }
 `;
 
-const PlayersList = () => {
+const Player = props => {
   const [currentName, setCurrentName] = useState('');
   const [currentPosition, setCurrentPosition] = useState('');
   const [currentTeam, setCurrentTeam] = useState('');
   const [currentJerseyNumber, setCurrentJerseyNumber] = useState('');
   const [currentWonSuperBowl, setCurrentWonSuperBowl] = useState(false);
-
-  const [createPlayer, {data}] = useMutation(ADD_PLAYER);
-  // console.log('data', currentName, currentPosition, currentTeam, currentJerseyNumber, currentWonSuperBowl);
-console.log("currentJerseyNumber", currentJerseyNumber)
+ 
+  const [createPlayer] = useMutation(ADD_PLAYER);
   return (
     <View>
       <Text style={styles.header}>Create Player</Text>
@@ -87,7 +85,7 @@ console.log("currentJerseyNumber", currentJerseyNumber)
         </TouchableOpacity>
       </View>
       <TouchableOpacity
-        onPress={() => createPlayer({
+        onPress={() => { createPlayer({
           variables: {
             name: currentName,
             position: currentPosition,
@@ -95,7 +93,9 @@ console.log("currentJerseyNumber", currentJerseyNumber)
             jerseyNumber: currentJerseyNumber,
             wonSuperBowl: currentWonSuperBowl,
           },
-        })}
+        })
+        props.navigation.navigate('Home')
+        }}
         style={styles.submitButton}>
         <Text style={styles.buttonText}>Create Player</Text>
       </TouchableOpacity>
@@ -103,7 +103,7 @@ console.log("currentJerseyNumber", currentJerseyNumber)
   );
 };
 
-export default PlayersList;
+export default Player;
 
 const styles = StyleSheet.create({
   header: {
