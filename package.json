@@ -18,7 +18,7 @@
   "dependencies": {
     "@apollo/react-hooks": "^3.1.2",
     "apollo-client-preset": "^1.0.8",
-    "apollo-server": "^2.9.4",
+    "apollo-server": "^2.14.2",
     "dotenv": "^8.1.0",
     "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
